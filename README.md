@@ -11,7 +11,6 @@ This project showcases the integration of **multi-source flood data** using a fu
 
 We adopt a **multi-layered architecture** and hybrid processing approach:
 
-![Architecture Diagram](docs/flood_data_architecture.png)
 
 | Layer                | Description                         | Tools                         | Format             |
 | -------------------- | ----------------------------------- | ----------------------------- | ------------------ |
