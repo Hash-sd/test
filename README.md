@@ -1,5 +1,7 @@
 # 🌊 Predictive Flood Analytics with Hadoop Ecosystem in Lampung
 
+Authors:Shula Talitha Ardhya Putri (121450087)Esteria Rohanauli Sidauruk (122450025)Hermawan Manurung (122450069)Gymnastiar Al Khoarizmy (122450096)Program Studi Sains Data, Fakultas Sains, Institut Teknologi SumateraMei 2025
+
 Welcome to the **Flood Prediction Big Data Project** repository! 🚀
 This project showcases the integration of **multi-source flood data** using a full-fledged **Apache Hadoop Ecosystem**. The system is designed to support **real-time and batch processing** for flood prediction in **Lampung Province**, Indonesia.
 
