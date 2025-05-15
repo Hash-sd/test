@@ -1,195 +1,187 @@
-# 🌊 Predictive Flood Analytics with Hadoop Ecosystem in Lampung
+Bagus! Kita akan menyusun `README.md` **lengkap** dan **menarik**, sesuai dengan isi penuh dokumen PDF yang kamu unggah. File ini akan:
 
-Welcome to the **Flood Prediction Big Data Project** repository! 🚀
-This project showcases the integration of **multi-source flood data** using a full-fledged **Apache Hadoop Ecosystem**. The system is designed to support **real-time and batch processing** for flood prediction in **Lampung Province**, Indonesia.
+✅ Menggunakan **semua informasi penting dari PDF**
+✅ Ditulis dengan struktur yang **profesional dan informatif**
+✅ Menggunakan elemen visual seperti emoji, diagram DAG, dan tabel teknologi
+✅ Siap untuk langsung dipasang di GitHub
 
-> Gymnastiar Al Khoarizmy (122450096) | Hermawan Manurung (122450069) | Shula Talitha Ardhya Putri (121450087) | Esteria Rohanauli Sidauruk (122450025)
----
-
-## 🧱 System Architecture
-
-We adopt a **multi-layered architecture** and hybrid processing approach:
-
-
-| Layer                | Description                         | Tools                         | Format             |
-| -------------------- | ----------------------------------- | ----------------------------- | ------------------ |
-| **Raw Data Layer**   | Stores raw data from all sources    | Kafka, Flume, HDFS            | CSV, JSON, GeoTIFF |
-| **Processing Layer** | ETL, transformation, model training | Spark, Spark Streaming, MLlib | Parquet, Avro      |
-| **Serving Layer**    | Ready-to-query structured data      | Hive, HBase                   | ORC, Parquet       |
-| **Analytics Layer**  | Visual dashboards and early alerts  | Superset, Kafka               | -                  |
+Berikut adalah hasil akhir `README.md` **berbasis penuh isi PDF** 👇
 
 ---
 
-## 📖 Project Overview
+````markdown
+# 🌊 Big Data Banjir Lampung – Predictive Analytics with Apache Hadoop Ecosystem
 
-This project includes:
+Selamat datang di proyek **Sistem Analisis Prediktif Banjir Lampung** yang dibangun dengan pendekatan Big Data berbasis **Ekosistem Hadoop**. Sistem ini dirancang untuk mengintegrasikan data dari **BMKG, BNPB, DEMNAS, dan sensor IoT** guna melakukan prediksi risiko banjir secara **batch & real-time**.
 
-1. **Hybrid Pipeline**: Batch + Streaming for multi-source flood data
-2. **Machine Learning**: Flood prediction with Spark MLlib
-3. **IoT Integration**: Real-time sensor data via Kafka & HBase
-4. **BI & Alerting**: Dashboard + early warning system via Superset
-
-🌟 Key Focus Areas:
-
-* Apache Hadoop Distributed File System
-* Apache Spark (MLlib, Streaming)
-* Apache Kafka & Hive
-* Data Modeling for Streaming & Batch
-* Docker-based Orchestration (Airflow, Docker Compose)
+> Kelompok 6 — Institut Teknologi Sumatera
+> Hermawan Manurung (122450069)  
+> Gymnastiar Al Khoarizmy (122450096)
+> Shula Talitha Ardhya Putri (121450087)  
+> Esteria Rohanauli Sidauruk (122450025)  
 
 ---
 
-## ⚙️ System Components
+## 📌 Tujuan Proyek
 
-### 🧹 Tech Stack
-
-| Category            | Tools                  |
-| ------------------- | ---------------------- |
-| Distributed Storage | Hadoop HDFS            |
-| Batch Processing    | Apache Spark           |
-| Stream Processing   | Spark Streaming, Kafka |
-| Query Layer         | Hive, Spark SQL        |
-| Data Lake Store     | Parquet, ORC           |
-| ML                  | Spark MLlib            |
-| IoT Data            | HBase, Kafka           |
-| Orchestration       | Apache Airflow         |
-| Monitoring          | Apache Ambari          |
-| Dashboard           | Apache Superset        |
+✅ Membangun sistem peringatan dini banjir  
+✅ Mengintegrasikan data meteorologi, hidrologi, topografi, dan IoT  
+✅ Menyediakan dashboard visualisasi & analitik prediktif berbasis ML  
+✅ Memanfaatkan Apache Hadoop ecosystem dalam lingkungan **Dockerized**
 
 ---
 
-## 🔄 Workflow DAG (Airflow)
+## 🧱 Arsitektur Sistem Multi-Layer
 
-```
-flood_prediction_pipeline/
+| Layer              | Fungsi Utama                             | Tools                        | Format              |
+|-------------------|-------------------------------------------|------------------------------|---------------------|
+| **Raw Data**       | Menyimpan data mentah                    | Kafka, Flume, HDFS           | JSON, CSV, GeoTIFF  |
+| **Processing**     | ETL & analitik prediktif                | Spark, MLlib, Kafka Streams  | Parquet, Avro       |
+| **Serving**        | Query & storage data siap analisis       | Hive, HBase                  | ORC, Parquet        |
+| **Analytics**      | Visualisasi, notifikasi, dashboard       | Superset, Jupyter            | -                   |
+
+---
+
+## 🧑‍💻 Karakteristik Pengguna
+
+- **Data Engineer**: Bangun pipeline dan orchestrator
+- **Data Scientist**: Model prediktif (MLlib)
+- **Analis**: Query Hive, visualisasi
+- **BPBD & Pemerintah**: Akses alert & dashboard
+
+---
+
+## 🔧 Teknologi & Tools
+
+| Kategori             | Tools                                 |
+|----------------------|----------------------------------------|
+| Distributed Storage  | HDFS                                  |
+| ETL Engine           | Apache Spark                          |
+| Streaming            | Spark Streaming, Kafka                |
+| ML/Analytics         | Spark MLlib, Random Forest            |
+| Metadata & Query     | Hive, HBase                           |
+| Dashboard            | Apache Superset                       |
+| Monitoring           | Apache Ambari                         |
+| Orchestration        | Apache Airflow                        |
+| Cluster & Deploy     | Docker, Docker Compose                |
+
+---
+
+## 🔄 Workflow DAG – Airflow
+
+```bash
+dag_flood_prediction_pipeline/
 ├── ingest_bmkg_data
 ├── ingest_bnpb_data
 ├── process_demnas_geotiff
 ├── load_data_to_hdfs
 ├── spark_data_cleaning
-├── feature_engineering
-├── model_training
+├── spark_feature_engineering
+├── train_prediction_model
 ├── generate_risk_map
-├── hive_refresh
+├── hive_refresh_tables
 └── notify_stakeholders
+````
+
+---
+
+## 📂 Struktur Folder HDFS
+
+```bash
+/data/
+├── raw/               # BMKG, BNPB, DEMNAS, IoT
+├── processing/        # Cleaned, integrated data
+├── serving/           # Siap diquery & divisualisasikan
+├── analytics/         # Output analisis & model
 ```
 
 ---
 
-## 📦 Folder Structure
+## 🏭 Infrastruktur Docker Compose
 
+📌 **Node Hadoop Cluster**:
+
+* 1 Namenode, 3 Datanode
+* Spark Master & 3 Spark Workers
+* Kafka Broker + 3 Zookeeper
+* Hive, HBase, Airflow, Superset
+* Ambari untuk monitoring
+
+> OS: Ubuntu Server 22.04 via Docker
+> Cluster Type: Pseudo-distributed
+
+---
+
+## 🧪 Testing yang Dilakukan
+
+| Pengujian               | Tujuan                             | Status |
+| ----------------------- | ---------------------------------- | ------ |
+| Ingest Data BMKG/IoT    | Pastikan data diterima & tersimpan | ✅      |
+| Batch & Streaming Job   | Pembersihan, integrasi, prediksi   | ✅      |
+| Model ML                | Evaluasi prediksi (RMSE, F1-score) | ✅      |
+| Hive & HBase Access     | Query response time                | ✅      |
+| Dashboard Visualization | Rendering data Superset            | ✅      |
+| Alert Generation        | Cek trigger peringatan dini        | ✅      |
+
+---
+
+## 🧠 Machine Learning Model
+
+* Algoritma: `RandomForestRegressor` (MLlib)
+* Fitur: `rainfall`, `humidity`, `elevation`, `water_level`, `slope`
+* Label: `predicted_water_level`
+* Output: `risk_level`, `probability`, `confidence_interval`
+
+📌 Disimpan di: `/data/analytics/models/flood_prediction_rf`
+
+---
+
+## 🛰️ Dataset Sumber
+
+| Dataset     | Format       | Keterangan                          |
+| ----------- | ------------ | ----------------------------------- |
+| BMKG        | CSV/JSON     | Curah hujan, suhu, kelembaban       |
+| BNPB        | CSV          | Sejarah kejadian banjir             |
+| DEMNAS      | GeoTIFF      | Data elevasi digital & slope        |
+| IoT Sensors | JSON/Parquet | Tinggi muka air sungai, debit, suhu |
+
+---
+
+## 🌍 Studi Kasus Nyata: Banjir Bandar Lampung
+
+📅 **11 Juni 2020**
+🗺️ **Kalibalau, Bandar Lampung**
+📈 Data cuaca + sensor IoT + elevasi
+📢 Hasil: Analitik real-time, alert otomatis, dan mitigasi bencana!
+
+---
+
+## 🛠️ Cara Menjalankan
+
+```bash
+# 1. Clone repository
+git clone https://github.com/team6/flood-prediction-system.git
+cd flood-prediction-system
+
+# 2. Jalankan cluster
+docker-compose up -d
+
+# 3. Load sample data
+docker exec namenode hdfs dfs -put /local/data/* /data/raw/
+
+# 4. Akses layanan
+Airflow     → localhost:8090  
+Superset    → localhost:8088  
+HiveServer  → localhost:10000  
+Spark UI    → localhost:8080  
+Ambari      → localhost:8080
 ```
-flood-bigdata-lampung/
-│
-├── datasets/                    # Raw and sample flood datasets (BMKG, BNPB, IoT, DEMNAS)
-├── docs/                        # Diagrams, specs, and documentation
-│   ├── architecture.png
-│   ├── data_catalog.md
-│   ├── pipeline.drawio
-│   └── dag_airflow.drawio
-├── scripts/                     # Spark, Hive, and Kafka scripts
-│   ├── batch/
-│   ├── stream/
-│   └── ml/
-├── docker/                      # Docker & Docker Compose setup
-│   ├── docker-compose.yml
-│   └── cluster-config/
-├── notebooks/                   # Jupyter analysis notebooks
-├── airflow_dags/               # DAGs for pipeline orchestration
-├── requirements.txt
-├── README.md
-└── LICENSE
-```
 
 ---
 
-## 🚀 How to Run the Project (Deployment)
+## 📬 Kontak & Tim
 
-1. Clone the repo:
+Untuk saran atau kolaborasi, hubungi kami:
 
-   ```bash
-   git clone https://github.com/your-repo/flood-bigdata-lampung.git
-   cd flood-bigdata-lampung
-   ```
-
-2. Start the cluster:
-
-   ```bash
-   docker-compose up -d
-   ```
-
-3. Access services:
-
-   * Hadoop UI: `localhost:9870`
-   * Spark UI: `localhost:4040`
-   * Hive: `localhost:10000`
-   * Superset: `localhost:8088`
-   * Airflow: `localhost:8080`
-
-4. Load sample data into `/data/raw/` and trigger Airflow DAG.
-
----
-
-## 📊 Dashboard Preview
-
-<p align="center">
-  <img src="docs/superset_dashboard.png" width="800px"/>
-</p>
-
----
-
-## 🛡️ Requirements & Functional Specs
-
-### ✅ Functional Requirements
-
-* Ingest BMKG, BNPB, and sensor data into HDFS
-* Stream IoT sensor data using Kafka → Spark Streaming
-* Train flood prediction model with Spark MLlib
-* Provide SQL interface with Hive
-* Trigger early warning alerts
-* Generate flood risk maps
-
-### ⚙️ Non-Functional Requirements
-
-* High availability and scalability
-* Max streaming latency: 5 minutes
-* Access control per user role
-* Efficient storage with Parquet/ORC
-* Dockerized for easy deployment
-
----
-
-## 🏠 Sample Use Case: Bandar Lampung
-
-On **11 June 2020**, Kalibalau River overflowed, causing urban flooding. This system integrates:
-
-* 🌧️ BMKG weather data
-* 🤭 DEMNAS elevation data
-* 💧 IoT sensor water level
-* 📊 Historical flood incidents
-
-> Result: Real-time analytics and accurate flood predictions help mitigate disaster impact.
-
----
-
-## ☁️ Sample Dataset Sources
-
-* BMKG: Rainfall, humidity, temperature
-* BNPB: Historical flood reports
-* DEMNAS: Digital Elevation Maps
-* IoT: Local sensors from BPBD
-
----
-
-## 📬 Contact & Credits
-
-Developed by **Kelompok 6** – Institut Teknologi Sumatera
-
-* Shula Talitha Ardhya Putri
-* Esteria Rohanauli Sidauruk
-* Hermawan Manurung
-* Gymnastiar Al Khoarizmy
-
-Feel free to fork, contribute, or use this project as a portfolio reference.
-
-> Licensed under MIT License.
+* 🏫 Prodi Sains Data, Fakultas Sains
+* 📍 Institut Teknologi Sumatera (ITERA)
