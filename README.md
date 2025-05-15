@@ -2,11 +2,7 @@
 
 Selamat datang di proyek **Sistem Analisis Prediktif Banjir Lampung** yang dibangun dengan pendekatan Big Data berbasis **Ekosistem Hadoop**. Sistem ini dirancang untuk mengintegrasikan data dari **BMKG, BNPB, DEMNAS, dan sensor IoT** guna melakukan prediksi risiko banjir secara **batch & real-time**.
 
-> Kelompok 6 — Institut Teknologi Sumatera
-> Hermawan Manurung (122450069)  
-> Gymnastiar Al Khoarizmy (122450096)
-> Shula Talitha Ardhya Putri (121450087)  
-> Esteria Rohanauli Sidauruk (122450025)  
+> Gymnastiar Al Khoarizmy (122450096) | Hermawan Manurung (122450069) | Shula Talitha Ardhya Putri (121450087) | Esteria Rohanauli Sidauruk (122450025)
 
 ---
 
