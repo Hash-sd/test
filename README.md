@@ -1,15 +1,3 @@
-Bagus! Kita akan menyusun `README.md` **lengkap** dan **menarik**, sesuai dengan isi penuh dokumen PDF yang kamu unggah. File ini akan:
-
-✅ Menggunakan **semua informasi penting dari PDF**
-✅ Ditulis dengan struktur yang **profesional dan informatif**
-✅ Menggunakan elemen visual seperti emoji, diagram DAG, dan tabel teknologi
-✅ Siap untuk langsung dipasang di GitHub
-
-Berikut adalah hasil akhir `README.md` **berbasis penuh isi PDF** 👇
-
----
-
-````markdown
 # 🌊 Big Data Banjir Lampung – Predictive Analytics with Apache Hadoop Ecosystem
 
 Selamat datang di proyek **Sistem Analisis Prediktif Banjir Lampung** yang dibangun dengan pendekatan Big Data berbasis **Ekosistem Hadoop**. Sistem ini dirancang untuk mengintegrasikan data dari **BMKG, BNPB, DEMNAS, dan sensor IoT** guna melakukan prediksi risiko banjir secara **batch & real-time**.
